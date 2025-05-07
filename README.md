@@ -83,30 +83,32 @@ VITE_ACCESS_KEY=nDC3_4_pfKguepnTtZERJK_VbDXMXlLIp7brhdQpNMs
 
   ## Estructura del Proyecto
 
-├── assets/
-│   ├── pint.png
-│   ├── oscuro.png
-│   ├── perfil.png
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── fetchImages.js
-│   │   ├── Header.js
-│   │   ├── Gallery.js
-│   │   ├── ImageCard.js
-│   │   ├── messages.js
-│   │   └── Footer.js
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── header.css
-│   │   ├── gallery.css
-│   │   ├── footer.css
-│   │   └── responsive.css
-│   ├── index.html
-│   └── main.js
-├── .env
-├── package.json
-└── README.md
+```plaintext
+├── assets/  
+│   ├── pint.png  
+│   ├── oscuro.png  
+│   ├── perfil.png  
+│   └── …  
+├── src/  
+│   ├── components/  
+│   │   ├── fetchImages.js  
+│   │   ├── Header.js  
+│   │   ├── Gallery.js  
+│   │   ├── ImageCard.js  
+│   │   ├── messages.js  
+│   │   └── Footer.js  
+│   ├── css/  
+│   │   ├── style.css  
+│   │   ├── header.css  
+│   │   ├── gallery.css  
+│   │   ├── footer.css  
+│   │   └── responsive.css  
+│   ├── index.html  
+│   └── main.js  
+├── .env  
+├── package.json  
+└── README.md  
+
 
 ## Autor
 MSS1410
