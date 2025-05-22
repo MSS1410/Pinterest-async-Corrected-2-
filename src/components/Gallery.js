@@ -1,8 +1,9 @@
 import ImageCard from './imageCard'
 
 export function Gallery() {
-  const galleryContainer = document.createElement('div')
+  const galleryContainer = document.createElement('section')
   galleryContainer.id = 'gallery'
+  galleryContainer.setAttribute("aria-label", "galeria de imagenes")
   return galleryContainer
 }
 
