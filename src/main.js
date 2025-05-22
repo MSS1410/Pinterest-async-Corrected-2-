@@ -7,12 +7,34 @@ import { clearErrorMessage, showErrorMessage } from './components/messages.js'
 // en app inserto comp
 const app = document.getElementById('app')
 
+const header = Header({
+  initialTerm: initialTerm,
+  onSearch: searchImages,
+  onReset: resetSearch
+})
+//montar h
+app.appendChild(header)
+
+const main = document.createElement("main")
+main.classList.add("container")
+app.appendChild(main)
+
+
+main.appendChild(Gallery())
+main.appendChild(createErrorContainer())
+
+app.appendChild(Footer())
+
+
 const storageSave = 'initialSearch'
 let initialTerm = sessionStorage.getItem(storageSave)
 if (!initialTerm) {
   initialTerm = 'calisthenics'
   sessionStorage.setItem(storageSave, initialTerm)
 }
+
+searchImages(initialTearm)
+
 
 async function searchImages(query) {
   clearErrorMessage()
@@ -40,23 +62,14 @@ function resetSearch() {
   searchImages(savedTerm)
 }
 
-// crear headar
 
-const header = Header({
-  initialTerm: initialTerm,
-  onSearch: searchImages,
-  onReset: resetSearch
-})
-//montar h
-app.prepend(header)
 
-//montar gallery
-app.appendChild(Gallery())
 
-//footer
+
+
 
 const footer = Footer()
 app.appendChild(footer)
 
-// busqueda 0
-searchImages(initialTerm)
+
+
