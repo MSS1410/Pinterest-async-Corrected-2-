@@ -4,27 +4,6 @@ import { Gallery, renderImages } from './components/Gallery.js'
 import { fetchImages } from './components/fetchImages.js'
 import { clearErrorMessage, showErrorMessage } from './components/messages.js'
 
-// en app inserto comp
-const app = document.getElementById('app')
-
-const header = Header({
-  initialTerm: initialTerm,
-  onSearch: searchImages,
-  onReset: resetSearch
-})
-//montar h
-app.appendChild(header)
-
-const main = document.createElement("main")
-main.classList.add("container")
-app.appendChild(main)
-
-
-main.appendChild(Gallery())
-main.appendChild(createErrorContainer())
-
-app.appendChild(Footer())
-
 
 const storageSave = 'initialSearch'
 let initialTerm = sessionStorage.getItem(storageSave)
@@ -32,8 +11,6 @@ if (!initialTerm) {
   initialTerm = 'calisthenics'
   sessionStorage.setItem(storageSave, initialTerm)
 }
-
-searchImages(initialTearm)
 
 
 async function searchImages(query) {
@@ -63,13 +40,50 @@ function resetSearch() {
 }
 
 
+// en app inserto comp
+const app = document.getElementById('app')
+
+
+const header = Header({
+  initialTerm: initialTerm,
+  onSearch: searchImages,
+  onReset: resetSearch
+})
+
+//montar h
+app.appendChild(header)
+
+
+const main = document.createElement("main")
+main.classList.add("container")
+app.appendChild(main)
+
+const errorDiv = document.createElement("div")
+errorDiv = "error-message"
+main.appendChild(errorDiv)
 
 
 
+main.appendChild(Gallery())
 
 
 const footer = Footer()
 app.appendChild(footer)
+
+
+
+
+
+searchImages(initialTearm)
+
+
+
+
+
+
+
+
+
 
 
 
