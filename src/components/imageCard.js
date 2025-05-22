@@ -1,5 +1,5 @@
 export default function ImageCard(image) {
-  const container = document.createElement('div')
+  const container = document.createElement('article')
   container.classList.add('image-card')
 
   // img
