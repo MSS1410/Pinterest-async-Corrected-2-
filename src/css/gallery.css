@@ -1,4 +1,4 @@
-#gallery {
+main #gallery {
   column-count: 3;
   column-gap: var(--space-md);
   padding: var(--space-md);
