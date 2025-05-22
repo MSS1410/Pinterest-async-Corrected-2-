@@ -3,7 +3,7 @@
   text-align: center;
   padding: var(--space-lg);
   margin-top: var(--space-lg);
-  font-size: var(--space-lmd);
+  font-size: var(--space-md);
   color: var(--color-secundario);
   font-weight: bold;
 }
