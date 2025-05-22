@@ -1,7 +1,8 @@
 export default function Header({ initialTerm, onSearch, onReset }) {
   // content
   const header = document.createElement('header')
-  header.className = 'header'
+  header.classList.add("header")
+  
 
   // izq
   const logo = document.createElement('div')
